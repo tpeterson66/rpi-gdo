@@ -40,5 +40,6 @@ Jun 14 18:12:26 raspberrypi systemd[1]: Started Raspberry Pi Garage Door Opener.
 Jun 14 18:12:29 raspberrypi node[7691]: Garage Door Opener Started  on Port: 3000!
 ```
 
+If successful, navigate to http://<raspberryPi IP address>:3000
 
 
