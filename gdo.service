@@ -2,7 +2,7 @@
 Description=Raspberry Pi Garage Door Opener
 
 [Service]
-ExecStart=/var/www/gdo/gdo.js
+ExecStart=/usr/bin/node /var/www/gdo/gdo.js
 Restart=always
 User=pi
 Group=nogroup
