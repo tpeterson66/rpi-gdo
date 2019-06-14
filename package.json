@@ -1,0 +1,17 @@
+{
+  "name": "rpi-gdo",
+  "version": "0.0.0",
+  "description": "",
+  "main": "gdo.js",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.17.1",
+    "rpi-gpio": "^2.1.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
