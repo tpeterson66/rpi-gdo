@@ -2,6 +2,7 @@
 Raspberry Pi Garage Door Opener Project
 
 ## Wiring the Raspberry Pi
+![alt text](https://www.cytron.io/image/cache/catalog/products/BB-RELAY-5V-02/BB-RELAY-5V-02-0-1-1-512x512.png)
 Before installing the software on the Raspberry Pi, the following project will require a single 5v relay that will be used to open the connection to the garage door opener. The relay will have a 5v connection, ground connection, and GPIO in pin. The 5v or vcc pin can be connected to any 5v pin on the pi. The ground pin can be connected to any ground pin on the Pi, the GPIO in pin must be connected to GPIO4 or PIN7 to match the configuration in the below software.
 
 Once the relay is connected to the Pi, you will need to run a two pair wire from the relay to the garage door opener. When looking at the garage door opener, you will need to find the two wires that run to the push button attached to the wall. Connect the relay to the same wire ports as the push button for the door.
