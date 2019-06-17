@@ -1,0 +1,13 @@
+[Unit]
+Description=Raspberry Pi Garage Door Opener
+
+[Service]
+ExecStart=/usr/bin/node /var/www/gdo/gdo.js
+Restart=always
+User=pi
+Group=nogroup
+Environment=PATH=/usr/bin:/usr/local/bin
+WorkingDirectory=/var/www/gdo
+
+[Install]
+WantedBy=multi-user.target
