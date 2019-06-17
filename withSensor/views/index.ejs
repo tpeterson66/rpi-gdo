@@ -1,0 +1,28 @@
+<head>
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
+</head>
+<body>
+<center>
+
+<% if (status === "Garage Door Activated") { %>
+<div class="alert alert-success" role="alert"> <%= status %></div>
+<% } %>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Garage Door Opener</h1>
+    <p class="lead">Simple Garage Door Opener running on a Raspberry Pi</p>
+    <form method="post">
+    <button name="gdo" formmethod="post" formaction="/api/open" type="submit" class="btn btn-success">Open</button>
+    <button name="gdo" formmethod="post" formaction="/api/close" type="submit" class="btn btn-danger">Close</button>
+  </div>
+</div>
+
+ <a>Garage Door Status: <%=status %></a>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</center>
+</body>
+
+</form>
