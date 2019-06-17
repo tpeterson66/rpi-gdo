@@ -2,10 +2,19 @@
 Raspberry Pi Garage Door Opener Project
 
 ## Wiring the Raspberry Pi
+Before installing the software on the Raspberry Pi, the following project will require a single 5v relay that will be used to open the connection to the garage door opener. 
 ![alt text](https://www.cytron.io/image/cache/catalog/products/BB-RELAY-5V-02/BB-RELAY-5V-02-0-1-1-512x512.png)
-Before installing the software on the Raspberry Pi, the following project will require a single 5v relay that will be used to open the connection to the garage door opener. The relay will have a 5v connection, ground connection, and GPIO in pin. The 5v or vcc pin can be connected to any 5v pin on the pi. The ground pin can be connected to any ground pin on the Pi, the GPIO in pin must be connected to GPIO4 or PIN7 to match the configuration in the below software.
+
+The relay will have a 5v connection, ground connection, and GPIO in pin(s). The 5v or vcc pin can be connected to any 5v pin on the pi. The ground pin can be connected to any ground pin on the Pi, the GPIO in pin must be connected to GPIO4 or PIN7 to match the configuration in the below software.
 
 Once the relay is connected to the Pi, you will need to run a two pair wire from the relay to the garage door opener. When looking at the garage door opener, you will need to find the two wires that run to the push button attached to the wall. Connect the relay to the same wire ports as the push button for the door.
+
+## GDO Software Options
+Currently, there are two versions of this software available. The first option is a simple garage door opener that does not report current state of the door, either open or closed. Since the state is unknow, users of this method will be unable to know if they're closing the door or opening the door.
+
+The second option, which is in the withSensor folder uses a door sensor to identify the current state of the door and provide that to the user in the dashboard. This additional sensor is explained in greater detail within the notes of that folder.
+
+Following the steps below, you will install the basic garage door opener which will use only the relay and will not provide the current state of the door. If you'd like to have the additional features, please see the repspective folders.
 
 ## Install the GDO software
 Install a fresh copy of Raspbian on a Raspberry Pi. This should work on any version of Pi, however, it was only tested on a Raspberry Pi 3 B+.
