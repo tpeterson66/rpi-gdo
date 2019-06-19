@@ -1,19 +1,4 @@
-var gpio = require('pi-gpio');
-gpio.setDirection(11, "input");
+var rpio = require('rpio');
 
-
-function testSensor() {
-    gpio.read(11, function (err, value) {
-        if (err) {
-            throw err;
-        }
-        if (value === 0) {
-            console.log("The door is open")
-        }
-        else {
-            console.log("The door is closed")
-        }
-    });
-}
-
-setInterval(testSensor, 10000)
+rpio.open(11, rpio.INPUT);
+console.log('Door is currently ' + (rpio.read(11) ? 'closed' : 'open'));
